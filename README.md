@@ -20,14 +20,14 @@ The first step is for the user to define the target area for yield forecasts, as
 These inputs are used to retrieve Remote Sensing (RS) and weather datasets, which are freely available through the GEE catalogue. The retrieved datasets then inform the subsequent analytical processes.
 
 ### Crop phenology and vegetation dynamic
-The seasonal MODIS-NDVI profile for each pixel, aligned with the crop calendar, was linearly interpolated to derive the daily time series, which was then used to identify key phenological metrics:
+The seasonal MODIS-NDVI profile for each pixel, aligned with the crop calendar, is linearly interpolated to derive the daily time series, which is then used to identify key phenological metrics:
  - Crop Window Start (CWS): defined as the point when the 10-day moving average of the mean temperature in the first soil layer (0-7 cm, T_mean10, °C) exceeded a crop-specific temperature threshold;
  - Crop Window End   (CWE): corresponds to the harvest DOY, which is either set when the NDVI falls below the NDVI at sowing or on the last day of the crop calendar;
  - Start of Season   (SOS): defined as the DOY when NDVI reaches 20% of its peak value;
  - Peak  of Season   (POS): defined as the DOY when the maximum NDVI is reached;
  - End   of Season   (EOS): defined as the DOY when NDVI drop below 20% of its peak value.
 
-Afterwards, the NDVI profile was resized according to CWS and CWE. To modulate the intensity of soil water content variations and light interception, NDVI was transformed into fractional vegetation cover (FVC) through the following generalized function:
+Afterwards, the NDVI profile is resized according to CWS and CWE. To modulate the intensity of soil water content variations and light interception, NDVI is transformed into fractional vegetation cover (FVC) through the following generalized function:
 
 $$
 FVC_i = \frac{NDVI_i - NDVI_{sow}}{NDVI_{flo} - NDVI_{sow}}
@@ -64,7 +64,7 @@ $$
 where LAI_i is the LAI at the i-th composite date.  
 
 ### Crop growth and yield prediction
-The effect of daily average temperature (f_temp, unitless, range: 0–1, Eq. 3), as well as the impact of cold stress (f_cold, unitless, Eq. 4) and heat stress (f_heat, unitless, Eq. 5), on daily photosynthetic rates are computed using T_mean, T_min, and T_max as inputs. These are processed through a response function driven by crop-specific cardinal temperatures.  
+The effect of daily average temperature (f_temp, unitless, range: 0–1, Eq. 3), as well as the impact of cold stress (f_cold, unitless, Eq. 4) and heat stress (f_heat, unitless, Eq. 5), on daily photosynthetic rates is computed using T_mean, T_min, and T_max as inputs. These are processed through a response function driven by crop-specific cardinal temperatures.  
 
 Eq. 3:
 
