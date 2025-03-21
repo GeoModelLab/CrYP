@@ -1,4 +1,4 @@
-# CrYP - Crop Yield Prediction
+# CrYP - Crop Yield Prediction GEE app
 
 ## Table of Contents
 
