@@ -7,13 +7,17 @@
    - [Crop phenology and vegetation dynamic](#crop-phenology-and-vegetation-dynamic)
    - [Crop growth and yield prediction](#crop-growth-and-yield-prediction)
    - [Biomass and Yield Formation](#biomass-and-yield-formation)
-- [CrYP Interface](#cryp-interface)
+- [CrYP Interface and Usage](#cryp-interface-and-usage)
 - [License](#license)
+
+---
 
 ## Introduction
 CrYP (Crop Yield Prediction) is an open-source tool designed for pixel-level crop yield forecasting over large regions. CrYP operates within the Google Earth Engine (GEE) platform, utilizing a simple crop model executed at run-time over geographic areas. The app uses weather data from ERA5-Land and vegetation data from the MODIS Normalized Difference Vegetation Index.
 
 CrYP introduces a new approach for crop yield forecasting by incorporating real-time observed phenology into simple algorithms reproducing crop physiology.
+
+---
 
 ## Model Description
 The first step is for the user to define the target area for yield forecasts, as well as the crop type, crop calendar, and the production level (i.e., potential, cold-limited, heat-limited, and water-limited). 
@@ -167,31 +171,73 @@ where:
 - Rc = carbohydrate remobilization coefficient  
 - 0.01 = conversion factor from g m\(^{-2}\) to Mg ha\(^{-1}\)
 
-## CrYP Interface
-Users can operate the CrYP app through a graphical user interface (GUI) (Fig. 1) without requiring any coding experience. For advanced users, the source code can be modified directly from the same URL via the Google Earth Engine (GEE) editor.  
+---
 
-![image](https://github.com/user-attachments/assets/95ef0ae2-b1ef-44aa-a2e2-723b807c48f9)
+## CrYP Interface and Usage
 
-*Fig. 1. CrYP graphical user interface. The wheat yield map (winter crops) for the Piedmont region is displayed. The different sections are explained in the text.*
+⚠ **Note:** To use CrYP it is necessary to create a Google Earth Engine account, which can be done freely at: https://code.earthengine.google.com/register.  
 
-The GUI consists of five main sections:  
+CrYP app can be used through a practical graphical user interface (GUI) which will appear after running the script. The GUI consists of five main sections:
 
-- **Section A**: Set the crop type (maize or winter cereals, representing wheat and barley) and the production level (potential, cold-limited, heat-limited, or water-limited).  
-- **Section B**: Define the simulation year, the starting month of the growing season, and its expected duration.  
-- **Section C**: Specify the study area, either by drawing a geometry (polygon or point) on the map or by using vector data (shapefiles) from assets in the user's GEE account.  
-- **Section D**: Upload pre-computed NDVI time series from the user's GEE assets.  
-- **Section E**: Customize model parameters, including:  
+- **Section A**:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/bb69f7e1-8f37-4333-8814-2c642c817b53" width="600">
+</div>
+
+1. Set the crop type (maize or winter cereals, representing wheat and barley);
+2. Set the production level (potential, cold-limited, heat-limited, or water-limited);
+
+- **Section B**:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/3b07b869-5dcb-4add-92db-9ee7890a2844" width="600">
+</div>
+
+3. Set the simulation year;
+4. Set the starting month of the growing season and its expected duration, according to the expert knowledge and/or crop calendars;
+
+- **Section C**:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/38d9ed5b-80c6-41c6-bc92-a0e3b0081f32" width="600">
+</div>
+
+5. Set the study area, either by drawing a geometry (polygon or point) on the map or by using vector data (shapefiles) from assets in the user's GEE account. If you want to use a custom-made geometry, you need to draw it **before** running the script.
+
+- **Section D**:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/464bc040-5e5c-433e-a0c0-30d8321e88a6" width="600">
+</div>
+
+6. You can choose to use your own NDVI data by checking the box, providing the path to the asset folder of your GEE account and selecting the Image Collection from the dropbox list of the assets. Otherwise, the NDVI data will be computed "on-the-fly" for the study area defined in SectionA.
+
+⚠ **Note**: We highly racommend to precompute NDVI data to prevent memory issues when working with large areas or long time series.
+
+⚠  **Ensuring NDVI Data Compatibility**: We provide a GEE script to export NDVI data to your GEE assets in the correct format. This script allows users to:
+a. Select the sensor type (currently supports MODIS); b. Define a time range and study area.; c. Generate an NDVI image collection for improved performance.
+
+- **Section E**:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/aaa9b333-dcf3-4bef-b8c0-93f2b0e66dad" width="600">
+</div>
+
+7. Customize model parameters, including:  
   - Crop-specific cardinal temperatures (base, optimum, maximum, and extreme temperature thresholds for crop growth).  
   - Radiation Use Efficiency (RUE, g MJ^-1).  
   - Light extinction coefficient (k, unitless).  
   - Remobilization coefficient (remob_coeff, unitless).  
   - Time window for calculating the rolling average of soil temperature to define the sowing day (\( moving\_wind \), number of days).  
 
-To ensure consistency between the **NDVI data provided by users** and the **format expected by CrYP**, we developed a GEE script that exports NDVI data as an image collection directly to the user's GEE assets. This helps mitigate memory issues when working with **large areas** and/or **long time series**. Users can select the sensor type (currently supports MODIS), time range and Study area.  
+8. Click on the **run** button at the bottom of the GUI to start the simulation.
 
-CrYP simulation results, including **phenological metrics and yield rasters**, can be exported to **Google Drive** in **GeoTIFF format** for further analysis.  
+CrYP simulation results, including **phenological metrics and yield rasters**, can be exported to **Google Drive** in **GeoTIFF format** for further analysis. Exports can be started in the **export** tab.
 
-⚠ **Note:** Google Drive has a **15 GB free storage limit**. If the quota is exceeded, **export tasks will fail** unless additional storage is purchased.  
+⚠ **Storage Limitation**: Google Drive offers 15 GB of free storage. If your quota is exceeded, export tasks will fail unless you purchase additional storage.
+
+---
 
 ## License
 Attribution-NonCommercial-NoDerivatives 4.0 International
