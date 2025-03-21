@@ -20,8 +20,6 @@ CrYP introduces a new approach for crop yield forecasting by incorporating real-
 ---
 
 ## Model Description
-The first step is for the user to define the target area for yield forecasts, as well as the crop type, crop calendar, and the production level (i.e., potential, cold-limited, heat-limited, and water-limited). 
-These inputs are used to retrieve Remote Sensing (RS) and weather datasets, which are freely available through the GEE catalogue. The retrieved datasets then inform the subsequent analytical processes.
 
 ### Crop phenology and vegetation dynamic
 The seasonal MODIS-NDVI profile for each pixel, aligned with the crop calendar, is linearly interpolated to derive the daily time series, which is then used to identify key phenological metrics:
