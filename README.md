@@ -185,8 +185,8 @@ CrYP app can be used through a practical graphical user interface (GUI) which wi
   <img src="https://github.com/user-attachments/assets/bb69f7e1-8f37-4333-8814-2c642c817b53" width="600">
 </div>
 
-1. Set the crop type (maize or winter cereals, representing wheat and barley);
-2. Set the production level (potential, cold-limited, heat-limited, or water-limited);
+   1. Set the crop type (maize or winter cereals, representing wheat and barley);
+   2. Set the production level (potential, cold-limited, heat-limited, or water-limited);
 
 - **Section B**:
 
@@ -194,8 +194,8 @@ CrYP app can be used through a practical graphical user interface (GUI) which wi
   <img src="https://github.com/user-attachments/assets/3b07b869-5dcb-4add-92db-9ee7890a2844" width="600">
 </div>
 
-3. Set the simulation year;
-4. Set the starting month of the growing season and its expected duration, according to the expert knowledge and/or crop calendars;
+   3. Set the simulation year;
+   4. Set the starting month of the growing season and its expected duration, according to the expert knowledge and/or crop calendars;
 
 - **Section C**:
 
@@ -203,7 +203,7 @@ CrYP app can be used through a practical graphical user interface (GUI) which wi
   <img src="https://github.com/user-attachments/assets/38d9ed5b-80c6-41c6-bc92-a0e3b0081f32" width="600">
 </div>
 
-5. Set the study area, either by drawing a geometry (polygon or point) on the map or by using vector data (shapefiles) from assets in the user's GEE account. If you want to use a custom-made geometry, you need to draw it **before** running the script.
+   5. Set the study area, either by drawing a geometry (polygon or point) on the map or by using vector data (shapefiles) from assets in the user's GEE          account. If you want to use a custom-made geometry, you need to draw it **before** running the script.
 
 - **Section D**:
 
@@ -211,7 +211,8 @@ CrYP app can be used through a practical graphical user interface (GUI) which wi
   <img src="https://github.com/user-attachments/assets/464bc040-5e5c-433e-a0c0-30d8321e88a6" width="600">
 </div>
 
-6. You can choose to use your own NDVI data by checking the box, providing the path to the asset folder of your GEE account and selecting the Image Collection from the dropbox list of the assets. Otherwise, the NDVI data will be computed "on-the-fly" for the study area defined in SectionA.
+   6. You can choose to use your own NDVI data by checking the box, providing the path to the asset folder of your GEE account and selecting the Image
+      Collection from the dropbox list of the assets. Otherwise, the NDVI data will be computed "on-the-fly" for the study area defined in SectionA.
 
 ⚠ **Note**: We highly racommend to precompute NDVI data to prevent memory issues when working with large areas or long time series.
 
@@ -224,14 +225,14 @@ a. Select the sensor type (currently supports MODIS); b. Define a time range and
   <img src="https://github.com/user-attachments/assets/aaa9b333-dcf3-4bef-b8c0-93f2b0e66dad" width="600">
 </div>
 
-7. Customize model parameters, including:  
-  - Crop-specific cardinal temperatures (base, optimum, maximum, and extreme temperature thresholds for crop growth).  
-  - Radiation Use Efficiency (RUE, g MJ^-1).  
-  - Light extinction coefficient (k, unitless).  
-  - Remobilization coefficient (remob_coeff, unitless).  
-  - Time window for calculating the rolling average of soil temperature to define the sowing day (\( moving\_wind \), number of days).  
+  7. Customize model parameters, including:  
+      - Crop-specific cardinal temperatures (base, optimum, maximum, and extreme temperature thresholds for crop growth).  
+      - Radiation Use Efficiency (RUE, g MJ^-1).  
+      - Light extinction coefficient (k, unitless).  
+      - Remobilization coefficient (remob_coeff, unitless).  
+      - Time window for calculating the rolling average of soil temperature to define the sowing day (\( moving\_wind \), number of days).  
 
-8. Click on the **run** button at the bottom of the GUI to start the simulation.
+   8. Click on the **run** button at the bottom of the GUI to start the simulation.
 
 CrYP simulation results, including **phenological metrics and yield rasters**, can be exported to **Google Drive** in **GeoTIFF format** for further analysis. Exports can be started in the **export** tab.
 
