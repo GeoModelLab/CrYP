@@ -17,7 +17,7 @@
 ---
 
 ## Introduction
-CrYP (Crop Yield Prediction) is an open-source tool designed for pixel-level crop yield forecasting over large regions. CrYP operates within the Google Earth Engine (GEE) platform, utilizing a simple crop model executed at run-time over geographic areas. The app uses weather data from ERA5-Land and vegetation data from the MODIS Normalized Difference Vegetation Index.
+CrYP (Crop Yield Prediction) is an open-source tool designed for pixel-level crop yield forecasting over large regions. CrYP operates within the Google Earth Engine (GEE) platform (https://earthengine.google.com/), utilizing a simple crop model executed at run-time over geographic areas. The app uses weather data from ERA5-Land and vegetation data from the MODIS Normalized Difference Vegetation Index.
 
 CrYP introduces a new approach for crop yield forecasting by incorporating real-time observed phenology into simple algorithms reproducing crop physiology.
 
