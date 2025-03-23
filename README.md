@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/3a191e37-5f47-43fb-a416-65f4488c7c2a" width="200">
+</div>
+
 # CrYP - Crop Yield Prediction GEE app
 
 ## Table of Contents
@@ -16,6 +20,8 @@
 CrYP (Crop Yield Prediction) is an open-source tool designed for pixel-level crop yield forecasting over large regions. CrYP operates within the Google Earth Engine (GEE) platform, utilizing a simple crop model executed at run-time over geographic areas. The app uses weather data from ERA5-Land and vegetation data from the MODIS Normalized Difference Vegetation Index.
 
 CrYP introduces a new approach for crop yield forecasting by incorporating real-time observed phenology into simple algorithms reproducing crop physiology.
+
+The paper presenting CrYP is currently under review and its DOI will be available shortly.
 
 ---
 
@@ -36,7 +42,7 @@ FVC_i = \frac{NDVI_i - NDVI_{sow}}{NDVI_{flo} - NDVI_{sow}}
 $$
 
 where:  
-- FVC_i = Fractional vegetation cover at the i-th composite date
+- FVC_i = Fractional vegetation cover at the i-th date
 - NDVI_i = is the NDVI at the i-th composite date  
 - NDVI_flo = is the NDVI value at POS
 - NDVI_sow = is the NDVI value at CWS
@@ -172,6 +178,10 @@ where:
 ---
 
 ## CrYP Interface and Usage
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a83c9ad7-76ec-4891-8945-1c00501d6171" width="800">
+</div>
 
 ⚠ **Note:** To use CrYP it is necessary to create a Google Earth Engine account, which can be done freely at: https://code.earthengine.google.com/register.  
 
