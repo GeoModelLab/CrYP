@@ -182,6 +182,7 @@ where:
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/a83c9ad7-76ec-4891-8945-1c00501d6171" width="800">
+  <p><small><strong>Figure 1.</strong> <em>CrYP graphical user interface. The wheat yield map (winter crops) for the Piedmont region is displayed.</em><small></p>
 </div>
 
 ⚠ **Note:** To use CrYP it is necessary to create a Google Earth Engine account, which can be done freely at: https://code.earthengine.google.com/register.  
@@ -250,33 +251,38 @@ CrYP simulation results, including **phenological metrics and yield rasters**, c
 ---
 
 ## Case studies
-CrYP has been applied on two proof-of-concepts, demonstrating its ability to capture spatial and temporal yield variability of winter and summer crops grown in contrasting environments: (i) maize (Zea mays L.) crop grown in the U.S. Corn Belt in 2012 and 2020, and (ii) wheat (Triticum aestivum L.) and barley (Hordeum vulgare L.) grown in the Piedmont and Apulia regions of Italy (NUTS-2) in 2018 and 2022, respectively. 
+CrYP has been applied to two case studies, demonstrating its ability to capture spatial and temporal yield variability in contrasting environments:
+(i) maize (Zea mays L.) cultivated in the U.S. Corn Belt in 2012 and 2020, and
+(ii) wheat (Triticum aestivum L.) and barley (Hordeum vulgare L.) grown in the Piedmont and Apulia regions of Italy (NUTS-2) in 2018 and 2022, respectively.
 
 - IOWA case study
 
-Maize cultivation in Iowa, one of the core areas of the US Corn Belt is mostly rainfed and constitutes 17-18% of the national production. 
-The analysis was conducted for 2012, a year with exceptionally low yields due to frequent droughts and heat waves, and for 2020, i.e., as a reference for an average production year.
+Maize cultivation in Iowa, a core region of the U.S. Corn Belt, is predominantly rainfed and accounts for 17-18% of national production.
+This analysis focuses on 2012—a year marked by exceptionally low yields due to frequent droughts and heat waves—and 2020, which serves as a reference for an average production year.
 
-Simulated maize LAI dynamics and phenometrics (SOS, POS, and EOS) for the considered Iowa counties are presented below. In 2020, LAI values were consistently higher than in 2012, when severe drought and a heat wave significantly impacted crop growth. This resulted in a marked advancement of phenological stages in 2012 compared to 2020. 
+Simulated maize LAI dynamics and phenological metrics (SOS, POS, EOS) for selected Iowa counties are shown in Figure 2. In 2020, LAI values were consistently higher than in 2012, when severe drought and heat waves significantly impacted crop growth. As a result, phenological stages advanced considerably in 2012 compared to 2020.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/ff8f7fc6-dc22-4b0b-864d-37140dedc44e" width="600">
+  <p><small><strong>Figure 2.</strong> <em>Interpolated maize LAI dynamics from MODIS and boxplots of SOS, POS and EOS in 2012 (red) and 2020 (blue) for selected Iowa counties. The median value is indicated in the boxplot, and boxes extend from 25th to 75th percentile, while whiskers to 10th and 90th percentile. For LAI, shaded areas correspond to 25th and 75th percentile and solid lines correspond to the median.</em><small></p>
 </div>
 
-The impacts of drought and heat waves reflected also in the simulated yields:
+The impacts of drought and heat waves were also evident in the simulated yields:
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/ea25b632-bfcf-46b1-a7bd-d68db9aceda3" width="600">
+  <p><small><strong>Figure 3.</strong> <em>Potential (grey dots), heat-limited (red dots), cold-limited (cyan dots), and water-limited (blue dots) maize potential yields, along with full-limited (boxplot) maize yield distributions for selected Iowa counties (Cherokee – Che, Davis – Dav, Decatur – Dec, Howard – How, Mills – Mil, Poweshiek – Pow, Scott – Sco, Webster – Web and Winnebago – Win) in 2012 and 2020. The median yield is indicated within the boxplot, with boxes extending from the 25th to 75th percentiles and whiskers representing the 10th and 90th percentiles. Black crosses correspond to USDA official yields.</em><small></p>
 </div>
 
 - Italy case study
 
-In the second use case, we applied CrYP to two winter cereals in Italy, i.e., wheat in Piedmont and barley in Apulia. Here, the landscape is highly heterogeneous and characterized by relatively small fields. 
+In the second case study, CrYP was applied to two winter cereals: wheat in Piedmont and barley in Apulia. These regions feature a highly heterogeneous landscape characterized by relatively small fields, making it a contrasting environment compared to the vast, rainfed fields of Iowa.
 
-Here, CrYP succefully captured the phenology and yield variability:
+CrYP successfully captured the phenology and yield variability in these regions:
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/1ba8e773-0245-4e3c-a075-f7a7cfe02114" width="600">
+  <p><small><strong>Figure 4.</strong> <em>Phenological metric (SOS, POS, EOS) and potential yield maps for wheat in 2022 in Piedmont and barley in 2018 in Apulia.</em></small></p>
 </div>
 
 ---
