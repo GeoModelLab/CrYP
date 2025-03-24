@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/3a191e37-5f47-43fb-a416-65f4488c7c2a" width="200">
+  <img src="https://github.com/user-attachments/assets/29a1de1b-8535-4718-9d84-6166105accd1" width="200">
 </div>
 
 # CrYP - Crop Yield Prediction GEE app
