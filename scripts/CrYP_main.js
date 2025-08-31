@@ -570,7 +570,7 @@ CrYP_ui.Start = function (){
                   {fontWeight:'regular',margin:'3px',
                   fontSize:'14px'}));
   
-  controlPanel.add(ui.Label('The scientific paper presenting CrYP is under review.',
+  controlPanel.add(ui.Label('The scientific paper presenting CrYP is available at: https://doi.org/10.1016/j.compag.2025.110696',
                   {fontWeight:'regular',margin:'6px',
                   fontSize:'10px'}));
   
