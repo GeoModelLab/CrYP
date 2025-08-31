@@ -22,7 +22,7 @@ CrYP (Crop Yield Prediction) is an open-source tool designed for pixel-level cro
 
 CrYP introduces a new approach for crop yield forecasting by incorporating real-time observed phenology into simple algorithms reproducing crop physiology.
 
-The paper presenting CrYP is currently under review and its DOI will be available shortly.
+The paper presenting CrYP is available at: https://doi.org/10.1016/j.compag.2025.110696
 
 ---
 
